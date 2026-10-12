@@ -1,0 +1,165 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  background: #080d19;
+  color: #f2f7ff;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  max-width: 1200px;
+  margin: auto auto 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+h1 {
+  font-size: clamp(22px, 4vw, 34px);
+}
+
+h1 span {
+  color: #45f4d1;
+}
+
+.scores {
+  display: flex;
+  gap: 10px;
+}
+
+.scores div, aside {
+  background: #111a2b;
+  border: 1px solid #26344c;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+main {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 250px;
+  gap: 16px;
+}
+
+.game {
+  position: relative;
+  height: 70vh;
+  min-height: 400px;
+  overflow: hidden;
+  border: 1px solid #26344c;
+  border-radius: 14px;
+  background: #080d19;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+aside h2 {
+  font-size: 17px;
+  color: #45f4d1;
+}
+
+aside p {
+  color: #b8c5d9;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+#leaderboard li {
+  padding: 8px 0;
+  color: #c8d5e8;
+  border-bottom: 1px solid #26344c;
+  overflow-wrap: anywhere;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+  text-align: center;
+  background: #080d19dd;
+}
+
+.overlay h2 {
+  color: #45f4d1;
+  font-size: 30px;
+}
+
+.overlay p {
+  color: #b8c5d9;
+}
+
+.overlay input {
+  width: min(260px, 100%);
+  padding: 12px;
+  border: 1px solid #35445e;
+  border-radius: 8px;
+  background: #111a2b;
+  color: white;
+  font-size: 16px;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 24px;
+  background: #45f4d1;
+  color: #071511;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #a0ffe9;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  margin: 20px;
+  text-align: center;
+  color: #8290aa;
+  font-size: 12px;
+}
+
+@media (max-width: 760px) {
+  body {
+    padding: 10px;
+  }
+
+  header {
+    flex-wrap: wrap;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .game {
+    height: 58vh;
+    min-height: 350px;
+  }
+
+  aside {
+    display: block;
+  }
+}
