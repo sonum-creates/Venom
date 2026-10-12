@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Worm Arena</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🐍 Worm <span>Arena</span></h1>
+    <div class="scores">
+      <div>Score: <b id="score">0</b></div>
+      <div>Best: <b id="best">0</b></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="game">
+      <canvas id="arena"></canvas>
+
+      <div id="menu" class="overlay">
+        <h2 id="menuTitle">Worm Arena</h2>
+        <p id="menuText">Collect food. Avoid enemy worms!</p>
+        <input id="playerName" maxlength="16"
+               placeholder="Enter your name" value="Player">
+        <button id="start">Start Game</button>
+      </div>
+    </section>
+
+    <aside>
+      <h2>🏆 Leaderboard</h2>
+      <ol id="leaderboard"></ol>
+
+      <h2>⚡ Power-ups</h2>
+      <p>🟢 Green: Speed boost</p>
+      <p>🟣 Purple: Food magnet</p>
+      <p>🟡 Yellow: Bonus points</p>
+
+      <h2>🎮 Controls</h2>
+      <p>Move mouse or drag finger to steer.</p>
+      <p>Hold SPACE or touch the screen to boost.</p>
+      <p>Eat glowing dots to grow!</p>
+    </aside>
+  </main>
+
+  <footer>Worm Arena • HTML Canvas + JavaScript</footer>
+  <script src="game.js"></script>
+</body>
+</html>
